@@ -7,15 +7,27 @@
       a {
         color: red;
       }
-      div {
+      #exec-bio {
+        background-color: lightgray;
+      }
+      .bio-box {
         border: 1px solid black;
+      }
+      .bio-box a {
+        color:green;
+      }
+      #anon-bio {
+        background-color: orange;
+      }
+      .a-box {
+        background-color: purple;
       }
     </style>
   </head>
   <body>
     <h1>I'm an h1</h1>
     <ul>
-      <li>
+      <li id="anon-bio">
         <a href="https://example.com/">Link</a>
       </li>
       <li>
@@ -26,17 +38,17 @@
       </li>
     </ul>
     <h2>I'm an h2</h2>
-    <div>
-      <a href="https://example.com/" style="color: green;">I'm a link</a>
+    <div id ="exec-bio" class="bio-box a-box">
+      <a href="https://example.com/">I'm a link</a>
     </div>
-    <div>
-      <a href="https://example.com/" style="color: green;">I'm a link</a>
+    <div class="bio-box a-box">
+      <a href="https://example.com/">I'm a link</a>
     </div>
-    <div>
-      <a href="https://example.com/" style="color: green;">I'm a link</a>
+    <div class="bio-box a-box">
+      <a href="https://example.com/">I'm a link</a>
     </div>
-    <div>
-      <a href="https://example.com/" style="color: green;">I'm a link</a>
+    <div class="bio-box a-box">
+      <a href="https://example.com/">I'm a link</a>
     </div>
   </body>
 </html>
