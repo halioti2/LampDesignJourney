@@ -54,7 +54,7 @@ export const CONTACT_METHODS = [
   {
     icon: 'envelope',
     title: 'Email',
-    detail: 'ethan.r.davey@gmail.com'
+    detail: 'kaizen.glow.lamp@gmail.com'
   },
   {
     icon: 'map-marker-alt',

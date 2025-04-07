@@ -53,7 +53,7 @@ const Navbar = () => {
             scrolled ? "text-primary" : "text-white"
           }`}
         >
-          Ethan <span className={scrolled ? "text-primary" : "text-white"}>Davey</span>
+          Ethan Davey
         </a>
         <nav className="flex items-center">
           <ul className="hidden md:flex space-x-6 text-sm font-medium mr-4">
