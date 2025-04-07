@@ -31,8 +31,8 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: `#${SECTIONS.BEGINNING}`, label: "The Beginning" },
-    { href: `#${SECTIONS.EXPLORATION}`, label: "Material Exploration" },
+    { href: `#${SECTIONS.FIRST_LAMP}`, label: "My First Lamp" },
+    { href: `#${SECTIONS.EXPLORATION}`, label: "Acrylic Laser Cutting Exploration" },
     { href: `#${SECTIONS.COLLABORATION}`, label: "Collaboration" },
     { href: `#${SECTIONS.CURRENT}`, label: "Current Work" },
     { href: `#${SECTIONS.FUTURE}`, label: "Future" },
@@ -53,7 +53,7 @@ const Navbar = () => {
             scrolled ? "text-primary" : "text-white"
           }`}
         >
-          Luminous <span className="text-accent">Journey</span>
+          Ethan <span className="text-accent">Davey</span>
         </a>
         <nav>
           <ul className="hidden md:flex space-x-8 text-sm font-medium">

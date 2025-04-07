@@ -1,0 +1,87 @@
+Ethan Davey Portfolio Site Description
+Sections are as follows My First Lamp, Material Exploration, Collaboration, Current Work, Future update section titles and navigation links accordingly
+Navigation Bar
+Logo/Brand: “Ethan Davey"
+Navigation Links: My First Lamp, Material Exploration, Collaboration, Current Work, Future
+Mobile Menu: Hamburger icon that expands to show navigation options
+Hero Section
+Background Image: IMG_8281.jpeg (Artistic lamp design casting soft light)
+Title: "Kaizen Glow"
+Subtitle: "A journey through light, material, and form"
+Call to Action Button: "Begin"
+Scroll Indicator: Downward arrow animation
+Requested changes, the background image should rotate between 6902, 8BC8698A-76C1-4A14-9564-FA8D0A463D21, 8131, 8637, and 8277
+The Beginning Section
+Section Title: "My First Lamp"
+Decorative Divider: Gold gradient line
+Main Paragraph 1: "My journey into lamp design began at maker space class on vase making. Except instead of making a vase I was feeling inspired by paper lanterns and decided to make a lamp instead. 
+Main Paragraph 2: “When I took my lamp home, I was mesmerized by how the pattern of light played across different surfaces, even bringing in an old floor lamp off the street. These initial explorations sparked a fascination with how light interacts with different materials and spaces, and how a well-designed lamp can transform the atmosphere of a room."
+Image 1: IMG_8131.jpeg - "Repurposed floor lamp for design study" with caption "Repurposed vintage lamp exploration"
+Image 2: IMG_8132.jpeg - "Testing lamp placement in bedroom setting" with caption "Late night light effect studies"
+Image 3: IMG_7296.jpeg - “Lamp inspired by paper lanterns " with caption “First Lamp prototype"
+Material Exploration Section
+Section Title: “Acrylic Laser Cutting Exploration"
+Decorative Divider: Gold gradient line
+Main Paragraph 1: "My fascination with light led me to join the maker space as a teacher, which opened up opportunities to experiment with new materials. I became particularly drawn to frosted acrylics and their translucent properties—how they diffuse light in ways that create soft, ethereal glows."
+Main Paragraph 2: "This exploration began with creating laser-etched coasters for friends, allowing me to understand the interplay between material, texture, and light. These small projects gradually evolved into lamp designs where I could apply my growing knowledge of acrylic's unique characteristics."
+Color Study Indicators: Three colored circles (beige, brown, translucent black) labeled "Material color studies"
+Image 1: IMG_7978.jpeg - "Frosted acrylic coaster design" with caption "Early acrylic experiments"
+Image 3: IMG_7961.jpeg - "First acrylic lamp prototype" with caption "First acrylic lamp prototype"
+Image 4: 8BC8698A-76C1-4A14-9564-FA8D0A463D21.jpeg - "Wooden and acrylic coaster design" with caption "Wood and acrylic combinations"
+Collaboration & Experimentation Section
+Section Title: "Collaboration & Experimentation"
+Decorative Divider: Gold gradient line
+Main Paragraph 1: "A pivotal moment in my journey came when I met a fellow designer, Alec Riney, who shared my passion for lighting design and 3D printing. Our collaborative sessions sparked new ideas as we began sketching lamp concepts and testing unexpected light effects."
+Main Paragraph 2: "We explored lighting and materials—from observing how light plays on water rippling over mirrors to layering different paper textures around light sources. These experiments pushed my understanding of how materials interact with light and opened up new design possibilities."
+Featured Image 1: IMG_6902.jpeg - “Paper layering experiments" (large format)
+Experimental Gallery: Series of 7 experimental images (IMG_8645.jpeg, IMG_8644.jpeg, IMG_8643.jpeg, IMG_8642.jpeg, IMG_8641.jpeg, IMG_8640.jpeg, IMG_8639.jpeg, IMG_8637.jpeg)
+Sketches of lamp details
+Current Work Section
+Section Title: "Current Work"
+Decorative Divider: Gold gradient line (centered)
+Hero Image: IMG_8281.jpeg - Full-width image with overlay text
+Overlay Title: "Translucent Series"
+Overlay Description: "My current work explores the intersection of frosted acrylics, minimal forms and ambient lighting while drawing inspiration from textures from seashells. Each piece balances functional illumination with sculptural presence."
+Gallery Image 1: IMG_2215.jpeg - "Table lamp with layered acrylic shade" with caption "Orbital Table Lamp"
+Gallery Image 2: IMG_8277.jpeg - "Minimal standing floor lamp" with caption "Prism Floor Light"
+Gallery Image 3: IMG_8151.jpeg - "Pendant lamp with complex light pattern" with caption "Halo Pendant Light"
+Call to Action Button: "Inquire About Commissions"
+Future Directions Section
+Section Title: "Future Directions"
+Decorative Divider: Gold gradient line
+Main Paragraph 1: "Looking ahead, I'm deeply inspired by designers who are pushing the boundaries of materials and fabrication techniques. I'm particularly drawn to Instagram accounts like @anshuman_design.labs, @d.clae, @turn.studio, and @kaizen3dprints who are innovatively applying 3D printing to fields like architecture, pottery, fashion, and textiles."
+Main Paragraph 2: "These explorations are guiding my next phase of lamp design, where I aim to incorporate 3D printing techniques to create more complex, organic forms with precisely engineered light diffusion properties. I'm excited about merging traditional craft sensibilities with emerging fabrication technologies."
+Inspirations Subsection: Grid of 4 cards showing different design fields with Instagram handles
+Architecture (@anshuman_design.labs) https://www.instagram.com/anshuman_design.labs/
+Fashion (@d.clae) https://www.instagram.com/d.clae/
+Pottery (@turn.studio) https://www.instagram.com/turn.studio/
+Textiles (@kaizen3dprints) https://www.instagram.com/kaizen3dprints/
+The next steps box text needs to be reformatted and probably have its own style currently it is displaying black text that should be white.
+Next Steps Box: List of 4 future project directions:
+"Exploring parametric design tools for creating organic lamp forms"
+"Developing composite materials that combine 3D printing with traditional craft techniques"
+"Integrating low-energy LED technologies with advanced diffusion techniques"
+"Collaborating with architects and interior designers on site-specific lighting installations"
+Contact Section
+Section Title: "Get In Touch"
+Decorative Divider: Gold gradient line (centered)
+Intro Text: "Interested in commissioning a custom lamp or collaborating on a project? I'd love to hear from you. Let's create something illuminating together.”
+Make sure contact card contents fit in their containers visually
+Update my email
+Remove pinterest and behance icons
+Instagram icon should link to my instagram https://www.instagram.com/kaizen.glow.lamp/
+Contact Cards:
+Email: Icon + "Email" + “ethan.r.davey@gmail.com”
+Studio: Icon + "Studio" + "Spectrum Design Collective, Portland, OR"
+Social: Icon + "Social" + Instagram icon
+Contact Form:
+Name field
+Email field
+Subject field
+Message field
+"Send Message" button
+Success message (when submitted): "Thank You! Your message has been received. I'll be in touch soon."
+Footer
+Copyright: "© 2025 Kaizen Glow. All rights reserved."
+Navigation Links: The Beginning, Material Exploration, Collaboration, Current Work, Future
+

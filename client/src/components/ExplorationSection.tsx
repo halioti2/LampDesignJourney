@@ -32,11 +32,6 @@ const ExplorationSection = () => {
       caption: "Early acrylic experiments",
     },
     {
-      src: img7978, // Using the same image as requested
-      alt: "Laser cutting process for acrylic designs",
-      caption: "Laser cutting process",
-    },
-    {
       src: img7961,
       alt: "First acrylic lamp prototype",
       caption: "First acrylic lamp prototype",
@@ -63,7 +58,7 @@ const ExplorationSection = () => {
               className="text-3xl md:text-4xl font-serif font-bold mb-6"
               variants={itemVariant}
             >
-              Material Exploration
+              Acrylic Laser Cutting Exploration
             </motion.h2>
             <motion.div 
               className="h-px bg-gradient-to-r from-transparent via-[#D4B98C] to-transparent mb-10"
@@ -105,7 +100,7 @@ const ExplorationSection = () => {
             {images.map((image, index) => (
               <motion.div
                 key={index}
-                className="group relative overflow-hidden rounded-lg shadow-md"
+                className={`group relative overflow-hidden rounded-lg shadow-md ${index === 2 ? 'col-span-2' : ''}`}
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
                 variants={itemVariant}

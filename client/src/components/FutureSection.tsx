@@ -50,7 +50,7 @@ const FutureSection = () => {
             and fabrication techniques. I'm particularly drawn to Instagram accounts like {' '}
             {INSPIRATIONAL_ACCOUNTS.map((account, index) => (
               <span key={index}>
-                <a href="#" className="text-[#D4B98C] hover:underline">
+                <a href={account.url} target="_blank" rel="noopener noreferrer" className="text-[#D4B98C] hover:underline">
                   {account.name}
                 </a>
                 {index < INSPIRATIONAL_ACCOUNTS.length - 1 && (
@@ -90,15 +90,22 @@ const FutureSection = () => {
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="overflow-hidden rounded-lg mb-3">
-                  <img
-                    src={account.image}
-                    alt={`${account.field} inspiration`}
-                    className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-                <h4 className="font-medium">{account.field}</h4>
-                <p className="text-sm text-neutral-600">{account.name}</p>
+                <a 
+                  href={account.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="block"
+                >
+                  <div className="overflow-hidden rounded-lg mb-3">
+                    <img
+                      src={account.image}
+                      alt={`${account.field} inspiration`}
+                      className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                  <h4 className="font-medium">{account.field}</h4>
+                  <p className="text-sm text-neutral-600">{account.name}</p>
+                </a>
               </motion.div>
             ))}
           </motion.div>
@@ -107,23 +114,23 @@ const FutureSection = () => {
             className="bg-primary bg-opacity-5 p-8 rounded-lg border border-[#D4B98C] border-opacity-20"
             variants={itemVariant}
           >
-            <h3 className="text-xl font-serif font-medium mb-4">Next Steps</h3>
-            <ul className="space-y-3">
+            <h3 className="text-xl font-serif font-medium mb-4 text-primary">Next Steps</h3>
+            <ul className="space-y-3 text-primary">
               {NEXT_STEPS.map((step, index) => (
                 <motion.li 
                   key={index} 
-                  className="flex items-start"
+                  className="flex items-start text-white"
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.2, duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <span className="text-[#D4B98C] mr-3">
+                  <span className="text-[#D4B98C] mr-3 flex-shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
                   </span>
-                  <span>{step}</span>
+                  <span className="text-primary">{step}</span>
                 </motion.li>
               ))}
             </ul>

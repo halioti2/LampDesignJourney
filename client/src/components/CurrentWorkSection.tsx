@@ -88,8 +88,9 @@ const CurrentWorkSection = () => {
             <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
               <h3 className="text-2xl md:text-3xl font-serif mb-2">Translucent Series</h3>
               <p className="max-w-2xl">
-                My current work explores the intersection of frosted acrylics, minimal forms, and ambient lighting. 
-                Each piece balances functional illumination with sculptural presence.
+                My current work explores the intersection of frosted acrylics, minimal forms and ambient lighting 
+                while drawing inspiration from textures from seashells. Each piece balances functional illumination 
+                with sculptural presence.
               </p>
             </div>
           </motion.div>

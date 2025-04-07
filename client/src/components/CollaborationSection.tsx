@@ -33,6 +33,10 @@ const CollaborationSection = () => {
 
   const experimentalImages = [
     {
+      src: img8645,
+      alt: "Paper layering experiment"
+    },
+    {
       src: img8644,
       alt: "Paper layering experiment"
     },
@@ -58,7 +62,7 @@ const CollaborationSection = () => {
     },
     {
       src: img8637,
-      alt: "Advanced lighting concept"
+      alt: "Sketches of lamp details"
     }
   ];
 
@@ -86,15 +90,15 @@ const CollaborationSection = () => {
             className="text-lg leading-relaxed mb-8"
             variants={itemVariant}
           >
-            A pivotal moment in my journey came when I met a fellow designer at Spectrum who shared my 
-            passion for innovative lighting design. Our collaborative sessions sparked new ideas as we 
-            began sketching lamp concepts and testing unexpected light effects.
+            A pivotal moment in my journey came when I met a fellow designer, Alec Riney, who shared my 
+            passion for lighting design and 3D printing. Our collaborative sessions sparked new ideas 
+            as we began sketching lamp concepts and testing unexpected light effects.
           </motion.p>
           <motion.p 
             className="text-lg leading-relaxed"
             variants={itemVariant}
           >
-            We explored unconventional approaches—from observing how light plays on water rippling over 
+            We explored lighting and materials—from observing how light plays on water rippling over 
             mirrors to layering different paper textures around light sources. These experiments pushed 
             my understanding of how materials interact with light and opened up new design possibilities.
           </motion.p>
@@ -108,34 +112,18 @@ const CollaborationSection = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div 
-            className="md:col-span-2 group relative overflow-hidden rounded-lg shadow-md"
+            className="md:col-span-3 group relative overflow-hidden rounded-lg shadow-md"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
             variants={itemVariant}
           >
             <img
               src={img6902}
-              alt="Collaborative sketching session"
+              alt="Paper layering experiments"
               className="w-full h-96 object-cover"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-75 p-4 text-white opacity-0 translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-              <p className="font-mono text-sm">Collaborative sketching session</p>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="group relative overflow-hidden rounded-lg shadow-md"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-            variants={itemVariant}
-          >
-            <img
-              src={img8645}
-              alt="Water reflection light experiment"
-              className="w-full h-96 object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-75 p-4 text-white opacity-0 translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-              <p className="font-mono text-sm">Water reflection experiments</p>
+              <p className="font-mono text-sm">Paper layering experiments</p>
             </div>
           </motion.div>
         </motion.div>

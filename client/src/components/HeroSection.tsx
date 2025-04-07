@@ -1,16 +1,43 @@
-import { motion } from "framer-motion";
-import { SECTIONS } from "@/lib/constants";
-import img8281 from "@assets/IMG_8281.jpeg";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { SECTIONS, HERO_IMAGES } from "@/lib/constants";
+import img6902 from "@assets/IMG_6902.jpeg";
+import img8BC8698A from "@assets/8BC8698A-76C1-4A14-9564-FA8D0A463D21.jpeg";
+import img8131 from "@assets/IMG_8131.jpeg";
+import img8637 from "@assets/IMG_8637.jpeg";
+import img8277 from "@assets/IMG_8277.jpeg";
 
 const HeroSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const heroImages = [img6902, img8BC8698A, img8131, img8637, img8277];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img
-          src={img8281}
-          alt="Artistic lamp design casting soft light"
-          className="w-full h-full object-cover opacity-80"
-        />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full h-full"
+          >
+            <img
+              src={heroImages[currentImageIndex]}
+              alt={`Hero image ${currentImageIndex + 1}`}
+              className="w-full h-full object-cover opacity-80"
+            />
+          </motion.div>
+        </AnimatePresence>
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
 
@@ -21,16 +48,16 @@ const HeroSection = () => {
         className="container mx-auto px-6 relative z-10 text-center"
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6">
-          Illuminating Design
+          Kaizen Glow
         </h1>
         <p className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-8">
           A journey through light, material, and form
         </p>
         <motion.a
-          href={`#${SECTIONS.BEGINNING}`}
+          href={`#${SECTIONS.FIRST_LAMP}`}
           onClick={(e) => {
             e.preventDefault();
-            const element = document.getElementById(SECTIONS.BEGINNING);
+            const element = document.getElementById(SECTIONS.FIRST_LAMP);
             if (element) {
               window.scrollTo({
                 top: element.offsetTop - 100,
@@ -45,7 +72,7 @@ const HeroSection = () => {
           whileHover={{ y: -5 }}
           whileTap={{ y: 0 }}
         >
-          Explore My Journey
+          Begin
         </motion.a>
       </motion.div>
 

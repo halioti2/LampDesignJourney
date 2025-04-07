@@ -1,6 +1,6 @@
 export const SECTIONS = {
   HERO: 'hero',
-  BEGINNING: 'beginning',
+  FIRST_LAMP: 'first-lamp',
   EXPLORATION: 'exploration',
   COLLABORATION: 'collaboration',
   CURRENT: 'current',
@@ -8,26 +8,38 @@ export const SECTIONS = {
   CONTACT: 'contact'
 };
 
+export const HERO_IMAGES = [
+  '@assets/IMG_6902.jpeg',
+  '@assets/8BC8698A-76C1-4A14-9564-FA8D0A463D21.jpeg',
+  '@assets/IMG_8131.jpeg',
+  '@assets/IMG_8637.jpeg',
+  '@assets/IMG_8277.jpeg'
+];
+
 export const INSPIRATIONAL_ACCOUNTS = [
   {
     name: '@anshuman_design.labs',
     field: 'Architecture',
-    image: 'https://images.unsplash.com/photo-1627471310452-b0c490365c33?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80'
+    image: 'https://images.unsplash.com/photo-1627471310452-b0c490365c33?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+    url: 'https://www.instagram.com/anshuman_design.labs/'
   },
   {
     name: '@d.clae',
-    field: 'Pottery',
-    image: 'https://images.unsplash.com/photo-1481401908818-5b8303e73f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1528&q=80'
+    field: 'Fashion',
+    image: 'https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&auto=format&fit=crop&w=1527&q=80',
+    url: 'https://www.instagram.com/d.clae/'
   },
   {
     name: '@turn.studio',
-    field: 'Fashion',
-    image: 'https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&auto=format&fit=crop&w=1527&q=80'
+    field: 'Pottery',
+    image: 'https://images.unsplash.com/photo-1481401908818-5b8303e73f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1528&q=80',
+    url: 'https://www.instagram.com/turn.studio/'
   },
   {
     name: '@kaizen3dprints',
     field: 'Textiles',
-    image: 'https://images.unsplash.com/photo-1565372099203-8430ad0d9a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80'
+    image: 'https://images.unsplash.com/photo-1565372099203-8430ad0d9a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+    url: 'https://www.instagram.com/kaizen3dprints/'
   }
 ];
 
@@ -42,7 +54,7 @@ export const CONTACT_METHODS = [
   {
     icon: 'envelope',
     title: 'Email',
-    detail: 'hello@luminousjourney.com'
+    detail: 'ethan.r.davey@gmail.com'
   },
   {
     icon: 'map-marker-alt',
@@ -54,9 +66,7 @@ export const CONTACT_METHODS = [
     title: 'Social',
     social: true,
     platforms: [
-      { icon: 'instagram', url: '#' },
-      { icon: 'pinterest', url: '#' },
-      { icon: 'behance', url: '#' }
+      { icon: 'instagram', url: 'https://www.instagram.com/kaizen.glow.lamp/' }
     ]
   }
 ];

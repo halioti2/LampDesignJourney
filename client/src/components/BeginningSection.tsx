@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { SECTIONS } from "@/lib/constants";
 import img8131 from "@assets/IMG_8131.jpeg";
 import img8132 from "@assets/IMG_8132.jpeg";
-import img8134 from "@assets/IMG_8134.jpeg";
+import img7293 from "@assets/IMG_7293.jpeg";
 
 const ImageCard = ({ image, alt, caption }: { image: string; alt: string; caption: string }) => {
   return (
@@ -48,8 +48,8 @@ const BeginningSection = () => {
   const images = [
     {
       src: img8131,
-      alt: "Early lamp prototype in living room corner",
-      caption: "First prototype placement experiments",
+      alt: "Repurposed floor lamp for design study",
+      caption: "Repurposed vintage lamp exploration",
     },
     {
       src: img8132,
@@ -57,14 +57,14 @@ const BeginningSection = () => {
       caption: "Late night light effect studies",
     },
     {
-      src: img8134,
-      alt: "Repurposed floor lamp for design study",
-      caption: "Repurposed vintage lamp exploration",
+      src: img7293,
+      alt: "Lamp inspired by paper lanterns",
+      caption: "First Lamp prototype",
     },
   ];
 
   return (
-    <section id={SECTIONS.BEGINNING} className="py-20 md:py-28">
+    <section id={SECTIONS.FIRST_LAMP} className="py-20 md:py-28">
       <div className="container mx-auto px-6">
         <motion.div
           className="max-w-4xl mx-auto mb-16"
@@ -77,7 +77,7 @@ const BeginningSection = () => {
             className="text-3xl md:text-4xl font-serif font-bold mb-6"
             variants={itemVariant}
           >
-            The Beginning
+            My First Lamp
           </motion.h2>
           <motion.div 
             className="h-px bg-gradient-to-r from-transparent via-[#D4B98C] to-transparent mb-10"
@@ -87,18 +87,17 @@ const BeginningSection = () => {
             className="text-lg leading-relaxed mb-8"
             variants={itemVariant}
           >
-            My journey into lamp design began unexpectedly at a local maker space design class. 
-            What started as a casual exploration quickly turned into a passion that kept me awake into 
-            the early hours of the morning. I found myself constantly repositioning my prototype lamp 
-            throughout my apartment, even bringing in an old floor lamp to experiment with different 
-            light effects and spatial arrangements.
+            My journey into lamp design began at maker space class on vase making. Except instead of making a vase 
+            I was feeling inspired by paper lanterns and decided to make a lamp instead.
           </motion.p>
           <motion.p 
             className="text-lg leading-relaxed"
             variants={itemVariant}
           >
-            These initial explorations sparked a fascination with how light interacts with different 
-            materials and spaces, and how a well-designed lamp can transform the atmosphere of a room.
+            When I took my lamp home, I was mesmerized by how the pattern of light played across different surfaces, 
+            even bringing in an old floor lamp off the street. These initial explorations sparked a fascination with 
+            how light interacts with different materials and spaces, and how a well-designed lamp can transform the 
+            atmosphere of a room.
           </motion.p>
         </motion.div>
 
