@@ -2,14 +2,17 @@ import { motion } from "framer-motion";
 import { SECTIONS } from "@/lib/constants";
 import img8131 from "@assets/IMG_8131.jpeg";
 import img8132 from "@assets/IMG_8132.jpeg";
-import img7293 from "@assets/IMG_7293.jpeg";
+import img7296 from "@assets/IMG_7296.jpeg";
+import { useState } from "react";
+import ImageLightbox, { ImageType } from "./ImageLightbox";
 
-const ImageCard = ({ image, alt, caption }: { image: string; alt: string; caption: string }) => {
+const ImageCard = ({ image, alt, caption, onClick }: { image: string; alt: string; caption: string; onClick: () => void }) => {
   return (
     <motion.div 
-      className="group relative overflow-hidden rounded-lg shadow-md"
+      className="group relative overflow-hidden rounded-lg shadow-md cursor-pointer"
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.3 }}
+      onClick={onClick}
     >
       <img
         src={image}
@@ -24,6 +27,8 @@ const ImageCard = ({ image, alt, caption }: { image: string; alt: string; captio
 };
 
 const BeginningSection = () => {
+  const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
+
   const sectionVariant = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -57,7 +62,7 @@ const BeginningSection = () => {
       caption: "Late night light effect studies",
     },
     {
-      src: img7293,
+      src: img7296,
       alt: "Lamp inspired by paper lanterns",
       caption: "First Lamp prototype",
     },
@@ -114,10 +119,16 @@ const BeginningSection = () => {
                 image={image.src}
                 alt={image.alt}
                 caption={image.caption}
+                onClick={() => setSelectedImage(image)}
               />
             </motion.div>
           ))}
         </motion.div>
+        {/* Image Lightbox */}
+        <ImageLightbox 
+          image={selectedImage} 
+          onClose={() => setSelectedImage(null)} 
+        />
       </div>
     </section>
   );

@@ -4,8 +4,12 @@ import img8281 from "@assets/IMG_8281.jpeg";
 import img2215 from "@assets/IMG_2215.jpeg";
 import img8277 from "@assets/IMG_8277.jpeg";
 import img8151 from "@assets/IMG_8151.jpeg";
+import { useState } from "react";
+import ImageLightbox, { ImageType } from "./ImageLightbox";
 
 const CurrentWorkSection = () => {
+  const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
+  
   const sectionVariant = {
     hidden: { opacity: 0 },
     visible: {
@@ -30,17 +34,17 @@ const CurrentWorkSection = () => {
     {
       src: img2215,
       alt: "Table lamp with layered acrylic shade",
-      title: "Orbital Table Lamp"
+      caption: "Orbital Table Lamp"
     },
     {
       src: img8277,
       alt: "Minimal standing floor lamp",
-      title: "Prism Floor Light"
+      caption: "Prism Floor Light"
     },
     {
       src: img8151,
       alt: "Pendant lamp with complex light pattern",
-      title: "Halo Pendant Light"
+      caption: "Halo Pendant Light"
     }
   ];
 
@@ -77,7 +81,12 @@ const CurrentWorkSection = () => {
             variants={itemVariant}
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.5 }}
-            className="relative"
+            className="relative cursor-pointer"
+            onClick={() => setSelectedImage({
+              src: img8281,
+              alt: "Current lamp design studio shot",
+              caption: "Translucent Series"
+            })}
           >
             <img
               src={img8281}
@@ -106,10 +115,11 @@ const CurrentWorkSection = () => {
           {currentWorks.map((work, index) => (
             <motion.div
               key={index}
-              className="group relative overflow-hidden rounded-lg shadow-md"
+              className="group relative overflow-hidden rounded-lg shadow-md cursor-pointer"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
               variants={itemVariant}
+              onClick={() => setSelectedImage(work)}
             >
               <img
                 src={work.src}
@@ -117,11 +127,17 @@ const CurrentWorkSection = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-primary bg-opacity-75 p-4 text-white opacity-0 translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <p className="font-mono text-sm">{work.title}</p>
+                <p className="font-mono text-sm">{work.caption}</p>
               </div>
             </motion.div>
           ))}
         </motion.div>
+        
+        {/* Image Lightbox */}
+        <ImageLightbox 
+          image={selectedImage} 
+          onClose={() => setSelectedImage(null)} 
+        />
         
         <motion.div 
           className="mt-12 text-center"

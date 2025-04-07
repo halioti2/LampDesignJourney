@@ -53,7 +53,7 @@ const Navbar = () => {
             scrolled ? "text-primary" : "text-white"
           }`}
         >
-          Ethan <span className="text-accent">Davey</span>
+          Ethan <span className={scrolled ? "text-primary" : "text-white"}>Davey</span>
         </a>
         <nav>
           <ul className="hidden md:flex space-x-8 text-sm font-medium">

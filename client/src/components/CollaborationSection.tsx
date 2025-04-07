@@ -9,8 +9,12 @@ import img8641 from "@assets/IMG_8641.jpeg";
 import img8640 from "@assets/IMG_8640.jpeg";
 import img8639 from "@assets/IMG_8639.jpeg";
 import img8637 from "@assets/IMG_8637.jpeg";
+import { useState } from "react";
+import ImageLightbox, { ImageType } from "./ImageLightbox";
 
 const CollaborationSection = () => {
+  const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
+  
   const sectionVariant = {
     hidden: { opacity: 0 },
     visible: {
@@ -34,35 +38,43 @@ const CollaborationSection = () => {
   const experimentalImages = [
     {
       src: img8645,
-      alt: "Paper layering experiment"
+      alt: "Paper layering experiment",
+      caption: "Paper layering experiment"
     },
     {
       src: img8644,
-      alt: "Paper layering experiment"
+      alt: "Paper layering experiment",
+      caption: "Paper layering experiment"
     },
     {
       src: img8643,
-      alt: "Light refraction study"
+      alt: "Light refraction study",
+      caption: "Light refraction study"
     },
     {
       src: img8642,
-      alt: "Material texture exploration"
+      alt: "Material texture exploration",
+      caption: "Material texture exploration"
     },
     {
       src: img8641,
-      alt: "Shadow casting prototype"
+      alt: "Shadow casting prototype",
+      caption: "Shadow casting prototype"
     },
     {
       src: img8640,
-      alt: "Light diffusion test"
+      alt: "Light diffusion test",
+      caption: "Light diffusion test"
     },
     {
       src: img8639,
-      alt: "Mixed material prototype"
+      alt: "Mixed material prototype",
+      caption: "Mixed material prototype"
     },
     {
       src: img8637,
-      alt: "Sketches of lamp details"
+      alt: "Sketches of lamp details",
+      caption: "Sketches of lamp details"
     }
   ];
 
@@ -112,10 +124,15 @@ const CollaborationSection = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div 
-            className="md:col-span-3 group relative overflow-hidden rounded-lg shadow-md"
+            className="md:col-span-3 group relative overflow-hidden rounded-lg shadow-md cursor-pointer"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
             variants={itemVariant}
+            onClick={() => setSelectedImage({
+              src: img6902,
+              alt: "Paper layering experiments",
+              caption: "Paper layering experiments"
+            })}
           >
             <img
               src={img6902}
@@ -138,10 +155,11 @@ const CollaborationSection = () => {
           {experimentalImages.map((image, index) => (
             <motion.div
               key={index}
-              className="group relative overflow-hidden rounded-lg shadow-md"
+              className="group relative overflow-hidden rounded-lg shadow-md cursor-pointer"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               variants={itemVariant}
+              onClick={() => setSelectedImage(image)}
             >
               <img
                 src={image.src}
@@ -151,6 +169,12 @@ const CollaborationSection = () => {
             </motion.div>
           ))}
         </motion.div>
+        
+        {/* Image Lightbox */}
+        <ImageLightbox 
+          image={selectedImage} 
+          onClose={() => setSelectedImage(null)} 
+        />
       </div>
     </section>
   );

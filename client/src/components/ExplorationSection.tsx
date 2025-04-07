@@ -3,8 +3,12 @@ import { SECTIONS } from "@/lib/constants";
 import img7978 from "@assets/IMG_7978.jpeg";
 import img7961 from "@assets/IMG_7961.jpeg";
 import img8BC8698A from "@assets/8BC8698A-76C1-4A14-9564-FA8D0A463D21.jpeg";
+import { useState } from "react";
+import ImageLightbox, { ImageType } from "./ImageLightbox";
 
 const ExplorationSection = () => {
+  const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
+
   const sectionVariant = {
     hidden: { opacity: 0 },
     visible: {
@@ -100,10 +104,11 @@ const ExplorationSection = () => {
             {images.map((image, index) => (
               <motion.div
                 key={index}
-                className={`group relative overflow-hidden rounded-lg shadow-md ${index === 2 ? 'col-span-2' : ''}`}
+                className={`group relative overflow-hidden rounded-lg shadow-md cursor-pointer ${index === 2 ? 'col-span-2' : ''}`}
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
                 variants={itemVariant}
+                onClick={() => setSelectedImage(image)}
               >
                 <img
                   src={image.src}
@@ -117,6 +122,12 @@ const ExplorationSection = () => {
             ))}
           </motion.div>
         </motion.div>
+        
+        {/* Image Lightbox */}
+        <ImageLightbox 
+          image={selectedImage} 
+          onClose={() => setSelectedImage(null)} 
+        />
       </div>
     </section>
   );
