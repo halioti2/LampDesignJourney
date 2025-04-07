@@ -59,7 +59,7 @@ export const CONTACT_METHODS = [
   {
     icon: 'map-marker-alt',
     title: 'Studio',
-    detail: 'Spectrum Design Collective\nPortland, OR'
+    detail: 'Kaizen Glow\nBrooklyn, NY'
   },
   {
     icon: 'hashtag',
