@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { SECTIONS, INSPIRATIONAL_ACCOUNTS, NEXT_STEPS } from "@/lib/constants";
+import { FaBuilding, FaTshirt, FaCoffee, FaLayerGroup, FaInstagram } from "react-icons/fa";
 
 const FutureSection = () => {
   const sectionVariant = {
@@ -85,7 +86,7 @@ const FutureSection = () => {
             {INSPIRATIONAL_ACCOUNTS.map((account, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-50 p-4 rounded-lg"
+                className="bg-gray-700 p-6 rounded-lg text-center"
                 variants={itemVariant}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
@@ -96,15 +97,17 @@ const FutureSection = () => {
                   rel="noopener noreferrer" 
                   className="block"
                 >
-                  <div className="overflow-hidden rounded-lg mb-3">
-                    <img
-                      src={account.image}
-                      alt={`${account.field} inspiration`}
-                      className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
-                    />
+                  <div className="flex justify-center items-center mb-4">
+                    {account.field === 'Architecture' && <FaBuilding size={40} className="text-[#D4B98C]" />}
+                    {account.field === 'Fashion' && <FaTshirt size={40} className="text-[#D4B98C]" />}
+                    {account.field === 'Pottery' && <FaCoffee size={40} className="text-[#D4B98C]" />}
+                    {account.field === 'Textiles' && <FaLayerGroup size={40} className="text-[#D4B98C]" />}
                   </div>
-                  <h4 className="font-medium">{account.field}</h4>
-                  <p className="text-sm text-neutral-600">{account.name}</p>
+                  <h4 className="font-medium text-white mb-1">{account.field}</h4>
+                  <p className="text-sm text-[#D4B98C] flex items-center justify-center gap-1">
+                    <FaInstagram />
+                    {account.name}
+                  </p>
                 </a>
               </motion.div>
             ))}
@@ -114,12 +117,12 @@ const FutureSection = () => {
             className="bg-primary bg-opacity-5 p-8 rounded-lg border border-[#D4B98C] border-opacity-20"
             variants={itemVariant}
           >
-            <h3 className="text-xl font-serif font-medium mb-4 text-primary">Next Steps</h3>
-            <ul className="space-y-3 text-primary">
+            <h3 className="text-xl font-serif font-medium mb-4 text-white">Next Steps</h3>
+            <ul className="space-y-3">
               {NEXT_STEPS.map((step, index) => (
                 <motion.li 
                   key={index} 
-                  className="flex items-start text-white"
+                  className="flex items-start"
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.2, duration: 0.5 }}
@@ -130,7 +133,7 @@ const FutureSection = () => {
                       <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
                   </span>
-                  <span className="text-primary">{step}</span>
+                  <span className="text-white">{step}</span>
                 </motion.li>
               ))}
             </ul>

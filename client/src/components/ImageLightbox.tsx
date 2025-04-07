@@ -46,17 +46,19 @@ const ImageLightbox = ({ image, onClose }: ImageLightboxProps) => {
             />
           </svg>
         </button>
-        <div className="w-full h-full overflow-hidden bg-black rounded-lg">
-          <img
-            src={image.src}
-            alt={image.alt}
-            className="w-full h-full object-contain"
-          />
-          {image.caption && (
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
-              <p className="text-white font-mono text-sm">{image.caption}</p>
-            </div>
-          )}
+        <div className="flex items-center justify-center h-full">
+          <div className="relative">
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="max-w-full max-h-[80vh] mx-auto object-contain"
+            />
+            {image.caption && (
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
+                <p className="text-white font-mono text-sm">{image.caption}</p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>
