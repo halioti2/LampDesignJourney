@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Ethan Davey | Lamp Designer</title>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ethan Davey Portfolio</title>
     
     <!-- GitHub Pages SPA Redirect Script -->
     <script type="text/javascript">
@@ -14,6 +14,9 @@
       // converts it back into the correct url and adds it to the
       // browser's history using window.history.replaceState(...),
       // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
       (function(l) {
         if (l.search[1] === '/' ) {
           var decoded = l.search.slice(1).split('&').map(function(s) { 
@@ -25,11 +28,11 @@
         }
       }(window.location))
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <!-- This script injects a replit badge into the page, please feel free to remove this line -->
-    <script type="text/javascript" src="https://replit.com/public/js/replit-badge-v3.js"></script>
-  </body>
+    
+    <!-- Redirect to the actual app -->
+    <meta http-equiv="refresh" content="0;URL='./dist/public/index.html'" />
+</head>
+<body>
+    <p>If you are not redirected automatically, follow this <a href="./dist/public/index.html">link to the portfolio site</a>.</p>
+</body>
 </html>

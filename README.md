@@ -59,13 +59,37 @@ node static-serve.js
 4. Set the output directory to `dist/public`
 5. Configure rewrites to direct all paths to `index.html`
 
-### Option 3: GitHub Pages
+### Option 3: GitHub Pages (Detailed Instructions)
 
-1. Push the `dist/public` contents to a GitHub repository
-2. Enable GitHub Pages in the repository settings
-3. Add a `.nojekyll` file to the repository root
-4. If using a custom domain, configure DNS settings accordingly
-5. Create a `404.html` that redirects to index.html for SPA routing
+1. Build the static site:
+   ```bash
+   node build-static.js
+   ```
+
+2. Prepare your GitHub repository:
+   - Create a new repository on GitHub (or use an existing one)
+   - Make sure the repository name follows the pattern: `username.github.io` for a user site or any name for a project site
+
+3. Copy these special GitHub Pages files to your repository root:
+   - Copy `404.html` to your repository root
+   - Copy the `.nojekyll` file (create it if it doesn't exist) to disable Jekyll processing
+
+4. Deploy the built site:
+   - Copy the contents of `dist/public` to your repository
+   - Make sure `index.html` is at the root of your repository (for user sites) or in the root of your gh-pages branch (for project sites)
+
+5. Configure repository settings:
+   - Go to your repository settings on GitHub
+   - Navigate to "Pages" in the left sidebar
+   - Select the branch with your site files (usually `main` or `master`)
+   - Make sure the folder is set to "/ (root)" or "/docs" depending on where you placed the files
+   - Click "Save"
+   
+6. Wait for deployment:
+   - GitHub will provide a URL like `username.github.io` or `username.github.io/repo-name`
+   - It may take a few minutes for the site to be available
+
+This specific configuration handles SPA routing properly on GitHub Pages, which otherwise would show 404 errors for direct page access.
 
 ### Option 4: Self-Hosting
 
