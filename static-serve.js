@@ -5,7 +5,7 @@ import fs from 'fs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 5000; // Use the same port as the development server
 
 // Check if the dist/public directory exists
 const publicDir = path.join(__dirname, 'dist/public');
