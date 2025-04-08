@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="py-8 bg-primary bg-opacity-90 text-white text-center">
       <div className="container mx-auto px-6">
         <p className="mb-4">
-          &copy; {currentYear} KaizenGlow. All rights reserved.
+          &copy; {currentYear} Kaizen Glow. All rights reserved.
         </p>
         <div className="flex flex-wrap justify-center space-x-3 md:space-x-6">
           {footerLinks.map((link) => (

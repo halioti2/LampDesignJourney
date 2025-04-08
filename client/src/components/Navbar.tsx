@@ -52,6 +52,13 @@ const Navbar = () => {
           className={`text-2xl font-serif font-bold transition-colors duration-300 ${
             scrolled ? "text-primary" : "text-white"
           }`}
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            });
+          }}
         >
           Ethan Davey
         </a>

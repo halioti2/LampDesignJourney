@@ -66,7 +66,7 @@ export const CONTACT_METHODS = [
     title: 'Social',
     social: true,
     platforms: [
-      { icon: 'instagram', url: 'https://www.instagram.com/kaizen.glow.lamp/' }
+      { icon: 'instagram', url: 'https://www.instagram.com/kaizen.glow/' }
     ]
   }
 ];
