@@ -1,29 +1,48 @@
 body {
-    font-family: sans-serif; /* You can change this to a cyberpunk-inspired font later */
-    background-color: #000; /* Black background */
-    color: #f00; /* Red text */
+    font-family: 'Fira Mono', monospace; /* Paragraph font */
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
     margin: 0;
     padding: 20px;
+    line-height: 1.6;
 }
 
 header {
     text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f00;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #E60000; /* Deep Red border */
+    margin-bottom: 30px;
 }
 
 h1, h2, h3 {
-    color: #f00;
+    font-family: 'Rajdhani', sans-serif; /* Headline font */
+    color: #E60000; /* Deep Red */
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
 }
 
 .project {
     margin-bottom: 30px;
     padding: 15px;
-    border: 1px solid #333; /* Darker border for sections */
+    border: 1px solid #333; /* Dark gray border for sections */
 }
 
 a {
-    color: #f00;
+    color: #00FF00; /* Neon Green for links */
     text-decoration: none;
 }
 
@@ -31,9 +50,15 @@ a:hover {
     text-decoration: underline;
 }
 
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
 footer {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid #333;
-    color: #999; /* Lighter text for the footer */
+    color: #999; /* Light gray for the footer */
+    font-size: 0.9em;
 }
