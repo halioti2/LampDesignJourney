@@ -1,10 +1,11 @@
 body {
-    font-family: 'Fira Mono', monospace; /* Paragraph font */
+    font-family: 'VT323', monospace; /* Paragraph font */
     background-color: #000000; /* Black background */
     color: #FFFFFF; /* White text */
     margin: 0;
     padding: 20px;
     line-height: 1.6;
+    font-size: 1.1em; /* Adjust for readability of VT323 */
 }
 
 header {
@@ -15,24 +16,25 @@ header {
 }
 
 h1, h2, h3 {
-    font-family: 'Rajdhani', sans-serif; /* Headline font */
+    font-family: 'Bebas Neue', sans-serif; /* Headline font */
     color: #E60000; /* Deep Red */
     margin-top: 1.5em;
     margin-bottom: 0.5em;
+    letter-spacing: 0.05em; /* Slightly increase letter spacing for Bebas Neue */
 }
 
 h1 {
-    font-size: 2em;
-    font-weight: 700;
+    font-size: 2.5em; /* Make the main headline larger */
+    font-weight: 400; /* Bebas Neue doesn't have many weights */
     line-height: 1.2;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1.6em;
 }
 
 .project {
