@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif; /* You can change this to a cyberpunk-inspired font later */
+    background-color: #000; /* Black background */
+    color: #f00; /* Red text */
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f00;
+}
+
+h1, h2, h3 {
+    color: #f00;
+}
+
+.project {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #333; /* Darker border for sections */
+}
+
+a {
+    color: #f00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #999; /* Lighter text for the footer */
+}
